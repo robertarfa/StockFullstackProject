@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <DisableRunnerVisualstudio>true</DisableRunnerVisualstudio>
+  </PropertyGroup>
+</Project>
