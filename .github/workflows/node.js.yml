@@ -16,20 +16,17 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x' # Altere para a versão do .NET Core que você está usando
+        dotnet-version: '8.0.x' # Altere para a versão do .NET Core que você está usando
 
     - name: Restore dependencies
       run: dotnet restore Server/Server
 
     - name: Build
       run: dotnet build Server/Server -c Release --no-restore
-     
-    - name: Prepare for Testing (CI Only)
-      if: github.event_name == 'push' || github.event_name == 'pull_request'
-      working-directory: Server/TestProject
-      run: |
-        sed -i '/<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" \/>/d' TestProject.csproj
 
+    - name: Install xUnit
+      run: dotnet add package xunit
+      
     - name: Test
       working-directory: Server/TestProject 
       run: dotnet test -c Release --no-build 
