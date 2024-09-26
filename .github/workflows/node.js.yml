@@ -25,6 +25,7 @@ jobs:
       run: dotnet build Server/Server -c Release --no-restore
 
     - name: Install xUnit
+      working-directory: Server/TestProject 
       run: dotnet add package xunit
       
     - name: Test
