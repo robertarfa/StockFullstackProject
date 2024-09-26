@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\PROJETOS\\Pizzaria\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|d:\\projetos\\pizzaria\\server\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|solutionrelative:testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\addresstests\\addressmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|solutionrelative:testproject\\addresstests\\addressmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|d:\\projetos\\pizzaria\\server\\server\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|d:\\projetos\\pizzaria\\server\\server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|solutionrelative:server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\addresstests\\addressmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|solutionrelative:testproject\\addresstests\\addressmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\customertests\\customermodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,25 +63,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Server.csproj",
-              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Server.csproj",
-              "RelativeDocumentMoniker": "Server\\Server.csproj",
-              "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Server.csproj",
-              "RelativeToolTip": "Server\\Server.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Title": "TestProject",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\TestProject.csproj",
+              "RelativeDocumentMoniker": "TestProject\\TestProject.csproj",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\TestProject.csproj*",
+              "RelativeToolTip": "TestProject\\TestProject.csproj*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAcwBYAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-26T01:14:52.385Z",
+              "WhenOpened": "2024-09-26T01:24:16.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AddressModelTests.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\AddressTests\\AddressModelTests.cs",
               "RelativeDocumentMoniker": "TestProject\\AddressTests\\AddressModelTests.cs",
               "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\AddressTests\\AddressModelTests.cs",
               "RelativeToolTip": "TestProject\\AddressTests\\AddressModelTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBZwBcAAAAKAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T21:28:02.975Z",
               "EditorCaption": ""
@@ -101,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UpdateCustomerDto.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
@@ -114,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CreateCustomerDto.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\Dtos\\Customer\\CreateCustomerDto.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Dtos\\Customer\\CreateCustomerDto.cs",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "Server\\Models\\Customer.cs",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Server\\Data\\ApplicationDbContext.cs",
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\CustomerController.cs",
