@@ -1,0 +1,61 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x' # Altere para a versão do .NET Core que você está usando
+
+    - name: Restore dependencies
+      run: dotnet restore Server/Server
+
+    - name: Build
+      run: dotnet build Server/Server -c Release --no-restore
+
+    - name: Restore Test dependencies
+      run: dotnet restore Server/TestProject
+      
+    - name: Test
+      run: dotnet test Server/TestProject -c Release --no-build
+
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x' # Altere para a versão do Node.js que você está usando
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: Client/
+
+    - name: Run Vitest Tests
+      run: npm run test
+      working-directory: Client/
+
+    - name: Build Frontend
+      run: npm run build
+      working-directory: Client/
+      
+    - name: Upload Frontend Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-build
+        path: Client/dist
+
