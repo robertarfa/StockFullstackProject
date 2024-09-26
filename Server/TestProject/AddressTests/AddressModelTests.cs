@@ -11,7 +11,7 @@ namespace TestProject.AddressTests
         public void Address_ValidProperties_ShouldPassValidation()
         {
             // Arrange
-            var address = new Address
+            var address = new AddressModel
             {
                 Id = 1,
                 City = "Cidade Teste",
@@ -36,7 +36,7 @@ namespace TestProject.AddressTests
         public void Address_NumberLessThanOne_ShouldFailValidation()
         {
             // Arrange
-            var address = new Address
+            var address = new AddressModel
             {
                 Id = 1,
                 City = "Cidade Teste",

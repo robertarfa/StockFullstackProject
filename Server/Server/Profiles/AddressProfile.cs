@@ -10,10 +10,10 @@ public class AddressProfile : Profile
 {
     public AddressProfile()
     {
-        CreateMap<CreateAddressDto, Address>();
-        CreateMap<UpdateAddressDto, Address>();
-        CreateMap<Address, UpdateAddressDto>();
-        CreateMap<Address, ReadAddressDto>();
+        CreateMap<CreateAddressDto, AddressModel>();
+        CreateMap<UpdateAddressDto, AddressModel>();
+        CreateMap<AddressModel, UpdateAddressDto>();
+        CreateMap<AddressModel, ReadAddressDto>();
 
     }
 }

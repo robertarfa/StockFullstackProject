@@ -2,7 +2,7 @@
 
 namespace Server.Models
 {
-    public class Address
+    public class AddressModel
     {
         [Key]
         [Required]

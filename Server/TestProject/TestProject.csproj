@@ -27,8 +27,5 @@
 		<Using Include="Xunit" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(CI)' == 'true'">
-		<Import Project="ci.build.props" />
-	</ItemGroup>
 
 </Project>

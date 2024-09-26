@@ -9,12 +9,12 @@ namespace TestProject.CustomerTests
         public void Customer_ShouldCreateValidInstance()
         {
             // Arrange
-            var customer = new Customer
+            var customer = new CustomerModel
             {
                 Name = "Nome do Cliente",
                 PhoneNumber = "1234567890",
                 Active = true,
-                Address = new Address
+                Address = new AddressModel
                 {
                     Street = "Rua Teste",
                     Number = 123,
@@ -39,11 +39,11 @@ namespace TestProject.CustomerTests
         public void Customer_ShouldNotCreateInvalidInstance(string name, string phoneNumber, bool isValid)
         {
             // Arrange & Act
-            var customer = new Customer
+            var customer = new CustomerModel
             {
                 Name = name,
                 PhoneNumber = phoneNumber,
-                Address = new Address
+                Address = new AddressModel
                 {
                     Street = "Rua Teste",
                     Number = 123,

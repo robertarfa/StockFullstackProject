@@ -29,7 +29,7 @@ public class CustomerController : ControllerBase
     public IActionResult Create([FromBody] CreateCustomerDto customerDto)
     {
         //Criar um novo objeto Customer com base nos dados de um customerDto.
-        Customer customer = _mapper.Map<Customer>(customerDto);
+        CustomerModel customer = _mapper.Map<CustomerModel>(customerDto);
 
         if (!ModelState.IsValid)
         {
@@ -37,7 +37,7 @@ public class CustomerController : ControllerBase
         }
 
 
-        _context.Customer.Add(customer);
+        _context.Customers.Add(customer);
         _context.SaveChanges();
 
         return CreatedAtAction(nameof(GetById),
@@ -50,7 +50,7 @@ public class CustomerController : ControllerBase
     {
 
 
-        var customer = _context.Customer.FirstOrDefault(customer => customer.Id == id);
+        var customer = _context.Customers.FirstOrDefault(customer => customer.Id == id);
 
         if (customer is null) return NotFound();
         //já tem um objeto customer existente e deseja atualizar seus dados com base em um customerDto.
@@ -63,13 +63,13 @@ public class CustomerController : ControllerBase
     [HttpGet]
     public IEnumerable<ReadCustomerDto> GetAll([FromQuery] int skip = 0, [FromQuery] int take = 10)
     {
-        return _mapper.Map<List<ReadCustomerDto>>(_context.Customer.Include(a => a.Address).Skip(skip).Take(take));
+        return _mapper.Map<List<ReadCustomerDto>>(_context.Customers.Include(a => a.Address).Skip(skip).Take(take));
     }
 
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
-        var customer = _context.Customer.Include(a => a.Address).FirstOrDefault(customer => customer.Id == id);
+        var customer = _context.Customers.Include(a => a.Address).FirstOrDefault(customer => customer.Id == id);
 
         if (customer is null) return NotFound();
 
@@ -81,7 +81,7 @@ public class CustomerController : ControllerBase
     [HttpGet("GetByPhone/{phoneNumber}")]
     public IActionResult GetByPhone(string phoneNumber)
     {
-        var customer = _context.Customer.Include(a => a.Address).FirstOrDefault(customer => customer.PhoneNumber == phoneNumber);
+        var customer = _context.Customers.Include(a => a.Address).FirstOrDefault(customer => customer.PhoneNumber == phoneNumber);
 
         if (customer is null) return NotFound();
 
@@ -93,11 +93,11 @@ public class CustomerController : ControllerBase
     [HttpDelete]
     public IActionResult Delete(int id)
     {
-        var customer = _context.Customer.Include(a => a.Address).FirstOrDefault(customer => customer.Id == id);
+        var customer = _context.Customers.Include(a => a.Address).FirstOrDefault(customer => customer.Id == id);
 
         if (customer is null) return NotFound();
 
-        _context.Customer.Remove(customer);
+        _context.Customers.Remove(customer);
         _context.SaveChanges();
 
         return NoContent();

@@ -5,7 +5,7 @@ using System.Net;
 
 namespace Server.Models
 {
-    public class Customer
+    public class CustomerModel
     {
         //Fazer a validação do phoneNumber no service
         [Key]
@@ -23,7 +23,7 @@ namespace Server.Models
         public bool Active { get; set; }
 
         //public int AddressId { get; set; }
-        public required Address Address { get; set; }
+        public required AddressModel Address { get; set; }
 
 
         public void Validate()

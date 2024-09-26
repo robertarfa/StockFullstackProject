@@ -9,10 +9,10 @@ public class CustomerProfile : Profile
 {
     public CustomerProfile()
     {
-        CreateMap<CreateCustomerDto, Customer>();
-        CreateMap<UpdateCustomerDto, Customer>();
-        CreateMap<Customer, UpdateCustomerDto>();
-        CreateMap<Customer, ReadCustomerDto>();
+        CreateMap<CreateCustomerDto, CustomerModel>();
+        CreateMap<UpdateCustomerDto, CustomerModel>();
+        CreateMap<CustomerModel, UpdateCustomerDto>();
+        CreateMap<CustomerModel, ReadCustomerDto>();
 
     }
 }
