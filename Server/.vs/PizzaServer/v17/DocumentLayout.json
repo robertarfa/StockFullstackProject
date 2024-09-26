@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PROJETOS\\Pizzaria\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\models\\pizzadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\migrations\\pizzadbmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\migrations\\20211101171005_seed data.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\migrations\\20211029162038_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\models\\pizzamodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\pizzastore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D417C015-E565-4CA0-92D8-6BD59F37E7C3}|..\\PizzaServer\\PizzaStore.csproj|d:\\projetos\\pizzaria\\pizzaserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20211101171005_Seed data.Designer.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\20211101171005_Seed data.Designer.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Migrations\\20211101171005_Seed data.Designer.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\20211101171005_Seed data.Designer.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Migrations\\20211101171005_Seed data.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:30:35.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20211029162038_InitialCreate.Designer.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\20211029162038_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Migrations\\20211029162038_InitialCreate.Designer.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\20211029162038_InitialCreate.Designer.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Migrations\\20211029162038_InitialCreate.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:29:52.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PizzaStore.csproj",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\PizzaStore.csproj",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\PizzaStore.csproj",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\PizzaStore.csproj",
+              "RelativeToolTip": "..\\PizzaServer\\PizzaStore.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-08T22:27:12.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PizzaModels.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Models\\PizzaModels.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Models\\PizzaModels.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Models\\PizzaModels.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Models\\PizzaModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:20:29.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PizzaDb.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Models\\PizzaDb.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Models\\PizzaDb.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Models\\PizzaDb.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Models\\PizzaDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:19:26.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "..\\PizzaServer\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-08T22:11:39.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\appsettings.json",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\appsettings.json",
+              "RelativeToolTip": "..\\PizzaServer\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-08T22:11:33.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Program.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Program.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Program.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Program.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAtwDQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:09:04.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PizzaDbModelSnapshot.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\PizzaDbModelSnapshot.cs",
+              "RelativeDocumentMoniker": "..\\PizzaServer\\Migrations\\PizzaDbModelSnapshot.cs",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\PizzaServer\\Migrations\\PizzaDbModelSnapshot.cs",
+              "RelativeToolTip": "..\\PizzaServer\\Migrations\\PizzaDbModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T22:30:44.592Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

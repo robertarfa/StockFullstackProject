@@ -1,0 +1,92 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x' # Altere para a versão do .NET Core que você está usando
+
+    - name: Restore dependencies
+      run: dotnet restore Server/Server
+
+    - name: Build
+      run: dotnet build Server/Server -c Release --no-restore
+
+    - name: Test
+      run: dotnet test Server/Server/tests/server.Tests/ -c Release --no-build
+
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x' # Altere para a versão do Node.js que você está usando
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: Client/
+
+    - name: Run Vitest Tests
+      run: npm run test
+      working-directory: Client/
+
+    - name: Build Frontend
+      run: npm run build
+      working-directory: Client/
+      
+    - name: Upload Frontend Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-build
+        path: Client/dist
+
+  deploy:
+    needs: [build-backend, build-frontend]
+    runs-on: ubuntu-latest
+    # Configurar permissões para deploy (ex: secrets.DEPLOY_KEY)
+    # ...
+
+    steps:
+      - name: Download Frontend Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: frontend-build
+          path: Client/dist
+
+      # Exemplo de deploy para um servidor com SSH:
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # Comandos para atualizar a aplicação no servidor
+            # Backend
+            cd /var/www/myapp/server
+            git pull origin master
+            dotnet restore
+            dotnet publish -c Release -o publish
+            # ... (comandos para reiniciar o serviço do backend)
+
+            # Frontend
+            cd /var/www/myapp/client
+            rm -rf *
+            mv ../../../client/dist/* .
+            # ... (comandos para reiniciar o serviço do frontend, se aplicável)
