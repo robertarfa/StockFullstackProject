@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\PROJETOS\\Pizzaria\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|solutionrelative:testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|d:\\projetos\\pizzaria\\server\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AC2C9F23-50C8-4A30-B341-DA6DB43191DF}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|d:\\projetos\\pizzaria\\server\\testproject\\customertests\\customermodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DD508E1-FC74-4414-A43C-2344F09BE76D}|TestProject\\TestProject.csproj|solutionrelative:testproject\\customertests\\customermodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,19 +66,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "TestProject",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\TestProject.csproj",
+              "RelativeDocumentMoniker": "TestProject\\TestProject.csproj",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\TestProject.csproj",
+              "RelativeToolTip": "TestProject\\TestProject.csproj",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAcwBsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-26T01:15:12.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server",
+              "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-26T01:14:52.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AddressModelTests.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\AddressTests\\AddressModelTests.cs",
               "RelativeDocumentMoniker": "TestProject\\AddressTests\\AddressModelTests.cs",
               "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\AddressTests\\AddressModelTests.cs",
               "RelativeToolTip": "TestProject\\AddressTests\\AddressModelTests.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAKAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwBcAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T21:28:02.975Z"
+              "WhenOpened": "2024-09-25T21:28:02.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CustomerModelTests.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\TestProject\\CustomerTests\\CustomerModelTests.cs",
               "RelativeDocumentMoniker": "TestProject\\CustomerTests\\CustomerModelTests.cs",
@@ -83,19 +118,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UpdateCustomerDto.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
               "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
               "RelativeToolTip": "Server\\Data\\Dtos\\Customer\\UpdateCustomerDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAYAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:10:43.996Z"
+              "WhenOpened": "2024-09-25T18:10:43.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CreateCustomerDto.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\Dtos\\Customer\\CreateCustomerDto.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Dtos\\Customer\\CreateCustomerDto.cs",
@@ -103,11 +139,12 @@
               "RelativeToolTip": "Server\\Data\\Dtos\\Customer\\CreateCustomerDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T16:33:58.658Z"
+              "WhenOpened": "2024-09-25T16:33:58.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "Server\\Models\\Customer.cs",
@@ -115,23 +152,25 @@
               "RelativeToolTip": "Server\\Models\\Customer.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAawBwAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T16:22:32.336Z"
+              "WhenOpened": "2024-09-25T16:22:32.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Server\\Data\\ApplicationDbContext.cs",
               "ToolTip": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Server\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAzwA8AAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T11:39:01.532Z"
+              "WhenOpened": "2024-09-25T11:39:01.532Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\PROJETOS\\Pizzaria\\Server\\Server\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\CustomerController.cs",
@@ -139,7 +178,8 @@
               "RelativeToolTip": "Server\\Controllers\\CustomerController.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAYwDAAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T16:52:11.516Z"
+              "WhenOpened": "2024-09-19T16:52:11.516Z",
+              "EditorCaption": ""
             }
           ]
         }

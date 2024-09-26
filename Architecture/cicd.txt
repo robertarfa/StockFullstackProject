@@ -25,7 +25,7 @@ jobs:
       run: dotnet build Server/Server -c Release --no-restore
 
     - name: Test
-      run: dotnet test Server/Server/tests/server.Tests/ -c Release --no-build
+      run: dotnet test Server/TestProject -c Release --no-build
 
   build-frontend:
     runs-on: ubuntu-latest
