@@ -10,7 +10,7 @@ Este projeto implementa um sistema de gerenciamento de Pedidos utilizando uma ar
 
 - **TypeScript:** Linguagem principal para o desenvolvimento do Frontend, proporcionando tipagem estática e melhor organização do código.
 - **[React]:** Framework/Biblioteca escolhido para estruturar a aplicação Frontend e gerenciar componentes da interface.
-- **[Biblioteca de gerenciamento de estado]:** Redux.
+- **[Biblioteca de gerenciamento de estado]:** À Definir.
 - **[Biblioteca de estilos]:** SASS.
 - **[Ferramenta de build]:** Vite.
 - **Vitest:** Framework de testes unitários rápido e conciso para projetos que utilizam Vite.
@@ -28,7 +28,7 @@ Este projeto implementa um sistema de gerenciamento de Pedidos utilizando uma ar
 - **Domain-Driven Design (DDD):** A aplicação é estruturada em torno do domínio do problema, com entidades, Value Objects e Agregados representando os conceitos chave do negócio.
 - **Repository Pattern:** Repositórios são utilizados para abstrair o acesso a dados, permitindo que a lógica de negócio opere independentemente da implementação específica do banco de dados.
 - **Use Cases:** Casos de uso são implementados para definir as operações que o sistema pode realizar, encapsulando a lógica de negócio e orquestrando a interação com os repositórios.
-- Data Transfer Objects (DTOs): DTOs são utilizados para transferir dados entre as camadas da aplicação, desacoplando o domínio da apresentação e da persistência.
+- **Data Transfer Objects (DTOs)**: DTOs são utilizados para transferir dados entre as camadas da aplicação, desacoplando o domínio da apresentação e da persistência.
 
 ### Como executar o projeto:
 
@@ -49,7 +49,7 @@ Este projeto implementa um sistema de gerenciamento de Pedidos utilizando uma ar
 
 **Backend (xUnit):**
 
-1. Navegue até a pasta backend/tests: `cd Server`
+1. Navegue até a pasta backend/tests: `cd Server/TesteProject`
 2. Execute os testes: `dotnet test`
 
 ## Próximos Passos:
