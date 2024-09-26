@@ -28,7 +28,10 @@ jobs:
       run: dotnet restore Server/TestProject
       
     - name: Test
-      run: dotnet test Server/TestProject -c Release --no-build
+      working-directory: Server/TestProject 
+      env: # Define a variável de ambiente CI
+        CI: true 
+      run: dotnet test -c Release --no-build
 
   build-frontend:
     runs-on: ubuntu-latest
