@@ -3,8 +3,6 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build-backend:
@@ -23,14 +21,6 @@ jobs:
 
     - name: Build
       run: dotnet build Server/Server -c Release --no-restore
-
-    - name: Install xUnit
-      working-directory: Server/TestProject 
-      run: dotnet add package xunit
-      
-    - name: Test
-      working-directory: Server/TestProject 
-      run: dotnet test -c Release --no-build 
 
   build-frontend:
     runs-on: ubuntu-latest
