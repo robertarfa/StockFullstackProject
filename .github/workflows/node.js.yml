@@ -23,15 +23,17 @@ jobs:
 
     - name: Build
       run: dotnet build Server/Server -c Release --no-restore
+     
+    - name: Prepare for Testing (CI Only)
+      if: github.event_name == 'push' || github.event_name == 'pull_request' # Executa apenas em push e pull requests
+      working-directory: Server/TestProject
+      run: |
+        dotnet tool install --global dotnet-remove
+        dotnet remove package xunit.runner.visualstudio
 
-    - name: Restore Test dependencies
-      run: dotnet restore Server/TestProject
-      
     - name: Test
       working-directory: Server/TestProject 
-      env: # Define a variável de ambiente CI
-        CI: true 
-      run: dotnet test -c Release --no-build
+      run: dotnet test -c Release --no-build 
 
   build-frontend:
     runs-on: ubuntu-latest
