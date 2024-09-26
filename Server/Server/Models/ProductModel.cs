@@ -14,9 +14,9 @@ namespace Server.Models
 
         public string? Description { get; set; }
 
-        [Required(ErrorMessage = "O campo Tipo é obrigatório")]
+        //[Required(ErrorMessage = "O campo Categoria é obrigatório")]
 
-        public ProductEnum.Category Category { get; set; }
+        //public ProductEnum.Category Category { get; set; }
 
         [Required(ErrorMessage = "O campo Quantidade é obrigatório")]
 

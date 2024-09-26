@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Server.Data;
+using Server.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,3 +67,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

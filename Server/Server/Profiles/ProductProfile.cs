@@ -16,10 +16,6 @@ namespace Server.Profiles
             CreateMap<UpdateProductDto, ProductModel>();
             CreateMap<ProductModel, UpdateProductDto>();
             CreateMap<ProductModel, ReadProductDto>();
-
-            CreateMap<ProductEnum.Category, ReadProductDto>()
-              .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ToString()));
-
         }
     }
 }

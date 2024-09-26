@@ -10,7 +10,7 @@ namespace Server.Data.Dtos.Product
 
         public string? Description { get; set; }
 
-        public ProductEnum.Category Category { get; set; }
+        //public ProductEnum.Category Category { get; set; }
 
         public int Quantity { get; set; }
 
