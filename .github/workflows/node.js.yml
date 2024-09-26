@@ -25,11 +25,10 @@ jobs:
       run: dotnet build Server/Server -c Release --no-restore
      
     - name: Prepare for Testing (CI Only)
-      if: github.event_name == 'push' || github.event_name == 'pull_request' # Executa apenas em push e pull requests
+      if: github.event_name == 'push' || github.event_name == 'pull_request'
       working-directory: Server/TestProject
       run: |
-        dotnet tool install --global dotnet-remove
-        dotnet remove package xunit.runner.visualstudio
+        sed -i '/<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" \/>/d' TestProject.csproj
 
     - name: Test
       working-directory: Server/TestProject 
