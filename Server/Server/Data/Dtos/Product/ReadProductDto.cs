@@ -1,4 +1,5 @@
 ﻿using Server.Data.Enums;
+using Server.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Server.Data.Dtos.Product
@@ -10,7 +11,8 @@ namespace Server.Data.Dtos.Product
 
         public string? Description { get; set; }
 
-        //public ProductEnum.Category Category { get; set; }
+        public string CategoryName { get; set; }
+        //public CategoryModel Category { get; set; }
 
         public int Quantity { get; set; }
 

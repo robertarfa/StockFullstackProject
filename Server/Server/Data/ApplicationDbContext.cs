@@ -17,15 +17,15 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<ProductModel> Products { get; set; }
 
+    public DbSet<CategoryModel> Categories { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
 
-        //builder.Entity<CreateProductDto>()
-        // .HasKey(p => p.);
-
-        //builder.Entity<CreateProductDto>()
-        //     .Property(u => u.Category)
-        //     .HasConversion<string>();
+        builder.Entity<ProductModel>()
+            .HasOne(p => p.Category) // Um produto pertence a uma categoria
+            .WithMany() // Uma categoria pode ter muitos produtos (não estamos definindo a propriedade de navegação aqui)
+            .HasForeignKey(p => p.CategoryId); // Define a chave estrangeira
     }
 
 

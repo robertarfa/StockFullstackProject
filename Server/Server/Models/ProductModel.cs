@@ -14,17 +14,18 @@ namespace Server.Models
 
         public string? Description { get; set; }
 
-        //[Required(ErrorMessage = "O campo Categoria é obrigatório")]
-
-        //public ProductEnum.Category Category { get; set; }
+        [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "O campo Categoria é obrigatório.")]
+        public int CategoryId { get; set; } = 0;
+        public CategoryModel Category { get; set; }
 
         [Required(ErrorMessage = "O campo Quantidade é obrigatório")]
 
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } = 0;
 
         [Required(ErrorMessage = "O campo Valor é obrigatório")]
 
-        public decimal Price { get; set; }
+        public decimal Price { get; set; } = 0;
 
     }
 }

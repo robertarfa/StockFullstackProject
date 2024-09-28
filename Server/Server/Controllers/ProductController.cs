@@ -5,6 +5,7 @@ using Server.Data.Dtos;
 using Server.Models;
 using Server.Data.Dtos.Product;
 using Server.Data.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Controllers
 {
@@ -39,6 +40,14 @@ namespace Server.Controllers
                 return BadRequest(ModelState);
             }
 
+            // Busca a categoria existente pelo ID
+            var category = _context.Categories.Find(productDto.CategoryId);
+
+            if (category == null)
+            {
+                return BadRequest("Categoria inválida.");
+            }
+
 
             _context.Products.Add(product);
             _context.SaveChanges();
@@ -51,18 +60,27 @@ namespace Server.Controllers
         /// <summary>
         /// Edição um produto ao banco de dados
         /// </summary>
+        /// <param name="id">Referente a um produto específico no banco de dados.</param>
         /// <param name="productDto">Objeto com os campos necessários para edição de um produto</param>
         /// <returns>IActionResult</returns>
         /// <response code="204">Caso edição seja feita com sucesso</response>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public IActionResult Update(int id, [FromBody] UpdateCustomerDto productDto)
+        public IActionResult Update(int id, [FromBody] UpdateProductDto productDto)
         {
-
 
             var product = _context.Products.FirstOrDefault(product => product.Id == id);
 
             if (product is null) return NotFound();
+
+            // Busca a categoria existente pelo ID
+            var category = _context.Categories.Find(productDto.CategoryId);
+
+            if (category == null)
+            {
+                return BadRequest("Categoria inválida.");
+            }
+
             //já tem um objeto product existente e deseja atualizar seus dados com base em um productDto.
             _mapper.Map(productDto, product);
             _context.SaveChanges();
@@ -82,7 +100,7 @@ namespace Server.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<ReadProductDto> GetAll([FromQuery] int skip = 0, [FromQuery] int take = 10)
         {
-            return _mapper.Map<List<ReadProductDto>>(_context.Products.Skip(skip).Take(take));
+            return _mapper.Map<List<ReadProductDto>>(_context.Products.Include(c => c.Category.Name).Skip(skip).Take(take));
         }
 
         /// <summary>
@@ -95,7 +113,7 @@ namespace Server.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetById(int id)
         {
-            var product = _context.Products.FirstOrDefault(product => product.Id == id);
+            var product = _context.Products.Include(c => c.Category.Name).FirstOrDefault(product => product.Id == id);
 
             if (product is null) return NotFound();
 
