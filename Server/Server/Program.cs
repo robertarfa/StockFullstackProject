@@ -6,8 +6,9 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//string user = Environment.GetEnvironmentVariable("DB_USER");
 
-var connectionString = builder.Configuration.GetConnectionString("stock");
+var connectionString = builder.Configuration.GetConnectionString("Database");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString)
 
@@ -59,6 +60,7 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Stock API V1");
 
     });
+    //app.ApplyMigrations();
 }
 
 // 3) use the capability

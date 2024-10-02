@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  server:
+    image: ${DOCKER_REGISTRY-}server
+    build:
+      context: .
+      dockerfile: Server/Dockerfile
+    ports:
+      - "5100:5100"
+      - "7200:7200"
+
+  stock.database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=stock      
+    ports:
+      - 5432:5432
+    volumes:
+      - /postgres-data:/var/lib/postgresql/data  
