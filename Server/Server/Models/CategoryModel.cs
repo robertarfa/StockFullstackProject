@@ -7,13 +7,12 @@ namespace Server.Models
     {
 
         // Construtor padrão (sem parâmetros)
-        public CategoryModel() { }
+        // public CategoryModel() { }
 
-        public CategoryModel(int id, string name)
+        public CategoryModel(string name)
         {
-            Id = id;
-            Name = name;
 
+            Name = name;
         }
 
         [Key]

@@ -30,16 +30,26 @@ namespace TestProject.ProductTests
             Assert.Empty(results);
         }
 
-        [Fact]
-        public void Product_ThrowAErrorWhenCreatingAProductWithoutName()
+        [Theory]
+        [InlineData("", "Product description", 1, 1, 20, "O campo Nome é obrigatório")]
+        [InlineData("Nome", "Product description", 0, 1, 20, "O campo Categoria é obrigatório.")]
+        [InlineData("Nome", "Product description", 1, 0, 20, "O campo Quantidade é obrigatório.")]
+        [InlineData("Nome", "Product description", 1, 1, 0, "O campo Valor é obrigatório.")]
+        public void Product_CreatingAInvalidProduct_ThrowAError(
+            string name,
+            string description,
+            int categoryId,
+            int quantity,
+            decimal price,
+            string message)
         {
             //Arrange
             CreateProductDto product = new(
-                name: "",
-                description: "Product description",
-                categoryId: 1,
-                quantity: 1,
-                price: 20
+                name: name,
+                description: description,
+                categoryId: categoryId,
+                quantity: quantity,
+                price: price
             );
 
             var context = new ValidationContext(product);
@@ -50,79 +60,8 @@ namespace TestProject.ProductTests
 
             // Assert
             Assert.False(isValid);
-            Assert.Contains(results, r => r.ErrorMessage == "O campo Nome é obrigatório");
+            Assert.Contains(results, r => r.ErrorMessage == message);
         }
 
-        [Fact]
-        public void Product_ThrowAErrorWhenCreatingAProductWithAInvalidCategory()
-        {
-
-            CategoryModel category = new(0, "Categoria");
-
-            //Arrange
-            CreateProductDto product = new(
-                name: "Product",
-                description: "Product description",
-                categoryId: category.Id,
-                quantity: 1,
-                price: 20
-            );
-
-            var context = new ValidationContext(product);
-            var results = new List<ValidationResult>();
-
-            // Act
-            var isValid = Validator.TryValidateObject(product, context, results, true);
-
-            // Assert
-            Assert.False(isValid);
-            Assert.Contains(results, r => r.ErrorMessage == "O campo Categoria é obrigatório.");
-        }
-
-        [Fact]
-        public void Product_ThrowAErrorWhenCreatingAProductWithAInvalidQuantity()
-        {
-            //Arrange
-            CreateProductDto product = new(
-                name: "Product",
-                description: "Product description",
-                categoryId: 1,
-                quantity: 0,
-                price: 20
-            );
-
-            var context = new ValidationContext(product);
-            var results = new List<ValidationResult>();
-
-            // Act
-            var isValid = Validator.TryValidateObject(product, context, results, true);
-
-            // Assert
-            Assert.False(isValid);
-            Assert.Contains(results, r => r.ErrorMessage == "O campo Quantidade é obrigatório.");
-        }
-
-        [Fact]
-        public void Product_ThrowAErrorWhenCreatingAProductWithAInvalidPrice()
-        {
-            //Arrange
-            CreateProductDto product = new(
-                name: "Product",
-                description: "Product description",
-                categoryId: 1,
-                quantity: 1,
-                price: 0
-            );
-
-            var context = new ValidationContext(product);
-            var results = new List<ValidationResult>();
-
-            // Act
-            var isValid = Validator.TryValidateObject(product, context, results, true);
-
-            // Assert
-            Assert.False(isValid);
-            Assert.Contains(results, r => r.ErrorMessage == "O campo Valor é obrigatório.");
-        }
     }
 }

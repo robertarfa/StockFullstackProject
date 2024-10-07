@@ -7,20 +7,19 @@ using System.Threading.Tasks;
 
 namespace TestProject.CategoryTests
 {
-    public class ProductModelTests
+    public class CategoryModelTests
     {
         [Fact]
         public void Category_CreateAValidCategory()
         {
             // Arrange
             string name = "Categoria Teste";
-            int id = 13;
 
             // Act
-            CategoryModel category = new(id, name);
+            CategoryModel category = new(name);
 
             // Assert
-            Assert.Equal(id, category.Id);
+            Assert.Equal(name, category.Name);
         }
 
     }
