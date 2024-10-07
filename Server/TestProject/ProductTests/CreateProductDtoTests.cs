@@ -56,11 +56,14 @@ namespace TestProject.ProductTests
         [Fact]
         public void Product_ThrowAErrorWhenCreatingAProductWithAInvalidCategory()
         {
+
+            CategoryModel category = new(0, "Categoria");
+
             //Arrange
             CreateProductDto product = new(
                 name: "Product",
                 description: "Product description",
-                categoryId: 0,
+                categoryId: category.Id,
                 quantity: 1,
                 price: 20
             );

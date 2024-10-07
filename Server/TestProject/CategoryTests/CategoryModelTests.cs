@@ -10,14 +10,18 @@ namespace TestProject.CategoryTests
     public class ProductModelTests
     {
         [Fact]
-        public void CreateAValidCategory()
+        public void Category_CreateAValidCategory()
         {
-            //Arrange
-            CategoryModel category = new CategoryModel();
+            // Arrange
+            string name = "Categoria Teste";
+            int id = 13;
 
             // Act
+            CategoryModel category = new(id, name);
 
             // Assert
+            Assert.Equal(id, category.Id);
         }
+
     }
 }
