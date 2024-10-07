@@ -6,8 +6,6 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//string user = Environment.GetEnvironmentVariable("DB_USER");
-
 var connectionString = builder.Configuration.GetConnectionString("Database");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString)
@@ -18,7 +16,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.
     AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddControllers().AddNewtonsoftJson(); ;
+builder.Services.AddControllers().AddNewtonsoftJson();
 //builder.Services.AddTransient<IPizzaRepository, PizzaRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

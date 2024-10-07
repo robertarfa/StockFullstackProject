@@ -1,0 +1,36 @@
+services:
+  server:
+    image: ${DOCKER_REGISTRY-}server
+    build:
+      context: .
+      dockerfile: ./Server/Server/Dockerfile
+    ports:
+      - '5100:5100'
+      - '7200:7200'
+
+  stock.database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=stock
+    ports:
+      - 5432:5432
+    volumes:
+      - /postgres-data:/var/lib/postgresql/data
+
+  spa.client:
+    container_name: spa-client
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: ./Client/Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - stock.database
+    # env_file:
+    #   - ./Client/.env
+    volumes:
+      - 'home/app/node_modules'
+      - './:/home/app'
