@@ -5,6 +5,18 @@ namespace Server.Models
 {
     public class ProductModel
     {
+        private decimal discount;
+        public const decimal MAX_DISCOUNT = 0.3m;
+
+        public ProductModel(string name, string? description, int categoryId, int quantity, decimal price)
+        {
+            Name = name;
+            Description = description;
+            CategoryId = categoryId;
+            Quantity = quantity;
+            Price = price;
+        }
+
         [Key]
         [Required]
         public int Id { get; set; }
@@ -27,5 +39,23 @@ namespace Server.Models
 
         public decimal Price { get; set; } = 0;
 
+        public decimal Discount
+        {
+            get => discount;
+            set
+            {
+                discount = value;
+                if (discount >= Price)
+                {
+                    //Desconto máximo de 30%
+                    Price *= (1 - MAX_DISCOUNT);
+                }
+                else
+                {
+                    Price -= discount;
+
+                }
+            }
+        }
     }
 }

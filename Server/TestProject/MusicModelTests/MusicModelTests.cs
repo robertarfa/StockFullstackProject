@@ -9,14 +9,14 @@ namespace TestProject.CategoryTests
 {
     public class MusicModelTests
     {
-        [Fact]
-        public void Music_ValidateName()
+        [Theory]
+        [InlineData("Música Teste")]
+        [InlineData("Outra Música")]
+        [InlineData("Mais uma Música")]
+        public void InicializaNomeCorretamenteQuandoCastradaNovaMusica(string nome)
         {
-            // Arrange
-            string nome = "Música Teste";
-
             // Act
-            MusicModel musica = new(nome);
+            MusicModel musica = new MusicModel(nome);
 
             // Assert
             Assert.Equal(nome, musica.Nome);
@@ -36,18 +36,35 @@ namespace TestProject.CategoryTests
             Assert.Equal(id, musica.Id);
         }
 
-        [Fact]
-        public void Music_TestToString()
+        [Theory]
+        [InlineData("Música Teste", "Nome: Música Teste")]
+        [InlineData("Outra Música", "Nome: Outra Música")]
+        [InlineData("Mais uma Música", "Nome: Mais uma Música")]
+        public void ExibeDadosDaMusicaCorretamenteQuandoChamadoMetodoExibeFichaTecnica
+(string nome, string saidaEsperada)
         {
             // Arrange
-            int id = 1;
-            string nome = "Música Teste";
-            MusicModel musica = new(nome)
-            {
-                Id = id
-            };
+            MusicModel musica = new MusicModel(nome);
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
 
-            string toStringEsperado = @$"Id: {id} Nome: {nome}";
+            // Act
+            musica.ExibirFichaTecnica();
+            string saidaAtual = stringWriter.ToString().Trim();
+
+            // Assert
+            Assert.Equal(saidaEsperada, saidaAtual);
+        }
+
+        [Theory]
+        [InlineData(1, "Música Teste", "Id: 1 Nome: Música Teste")]
+        [InlineData(2, "Outra Música", "Id: 2 Nome: Outra Música")]
+        [InlineData(3, "Mais uma Música", "Id: 3 Nome: Mais uma Música")]
+        public void ExibeDadosDaMusicaCorretamenteQuandoChamadoMetodoToString(int id, string nome, string toStringEsperado)
+        {
+            // Arrange
+            MusicModel musica = new MusicModel(nome);
+            musica.Id = id;
 
             // Act
             string resultado = musica.ToString();
@@ -55,5 +72,35 @@ namespace TestProject.CategoryTests
             // Assert
             Assert.Equal(toStringEsperado, resultado);
         }
+
+        [Fact]
+        public void MusicYearCanNotBeNegativeOrZero()
+        {
+            //Arrange
+            int invalidYear = -1900;
+
+            MusicModel music = new("Music");
+
+            //Act
+            music.Year = invalidYear;
+            //Assert
+            Assert.Null(music.Year);
+        }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+
+        public void MusicArtistCanNotBeNullOrEmpty(string? artist)
+        {
+            //Arrange
+            MusicModel music = new("Music");
+
+            //Act
+            music.Artista = artist;
+            //Assert
+            Assert.Equal(music.Artista, "Artista desconhecido");
+        }
+
     }
 }

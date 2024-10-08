@@ -100,7 +100,7 @@ namespace Server.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<ReadProductDto> GetAll([FromQuery] int skip = 0, [FromQuery] int take = 10)
         {
-            return _mapper.Map<List<ReadProductDto>>(_context.Products.Include(c => c.Category.Name).Skip(skip).Take(take));
+            return _mapper.Map<List<ReadProductDto>>(_context.Products.Include(c => c.Category).Skip(skip).Take(take));
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Server.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetById(int id)
         {
-            var product = _context.Products.Include(c => c.Category.Name).FirstOrDefault(product => product.Id == id);
+            var product = _context.Products.Include(c => c.Category).FirstOrDefault(product => product.Id == id);
 
             if (product is null) return NotFound();
 
