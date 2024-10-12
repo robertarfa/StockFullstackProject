@@ -18,7 +18,7 @@ export class CreateCustomerController implements ICustomerRepository {
   }
 
   async create(data: ICreateCustomerRequestDto): Promise<void> {
-    const response = await fetch('https://localhost:7200/api/Customer', {
+    const response = await fetch('VITE_API_BASE_URL' + 'Customer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

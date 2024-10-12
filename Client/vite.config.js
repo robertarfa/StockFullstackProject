@@ -8,7 +8,10 @@ export default defineConfig({
     environment: 'jsdom', // Define o ambiente como JSDOM
   },
   server: {
-    port: 3000, // Client port
+    port: 8080, // This is the port which we will use in docker
+    watch: {
+      usePolling: true,
+    },
     proxy: {
       '/Pizza': {
         target: 'https://localhost:7200', // Server port
